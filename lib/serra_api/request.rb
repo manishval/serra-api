@@ -35,7 +35,7 @@ module SerraApi
     private
 
     def uri(path)
-      URI.parse(SerraApi::Client::BASE_URL + path)
+      URI.parse(@client.base_url + path)
     end
 
     def request(uri, klass, params = nil)
